@@ -17,11 +17,16 @@ const [admin] = useAdmin(user);
   <div className="drawer-side">
     <label htmlFor="my-drawer-2" className="drawer-overlay"></label> 
     <ul className="menu p-4 overflow-y-auto w-56 bg-base-100 text-base-content">
-      {/* <!-- Sidebar content here --> */}
+
       <li className='text-xl text-accent'><Link to="/dashboard">My Appointments</Link></li>
       <li className='text-xl text-accent'><Link to="/dashboard/review">Review</Link></li>
       <li className='text-xl text-accent'><Link to="/dashboard/history">My History</Link></li>
-      {admin && <li className='text-xl text-accent'><Link to="/dashboard/users">All Users</Link></li>}
+     
+      {admin && <>
+        <li className='text-xl text-accent'><Link to="/dashboard/users">All Users</Link></li>
+        <li className='text-xl text-accent'><Link to="/dashboard/doctor">Add New Doctor</Link></li>
+        <li className='text-xl text-accent'><Link to="/dashboard/managedoctor">Manage All Doctors</Link></li>
+      </>}
       
     </ul>
   
